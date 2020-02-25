@@ -1,0 +1,26 @@
+#
+# shared for gitlab-runner support modules (prod)
+#
+packages:  
+  git:
+    version: [2.21.0]
+
+  openssl:
+    buildable: false
+    version: [system, 1.0.2k]
+    paths:
+      openssl@system: /usr
+      openssl@1.0.2k: /usr
+
+  slurm:
+    buildable: false
+    paths:
+      slurm@18.08.7: /usr
+    version: [18.08.7]
+
+  all:
+    compiler:
+      - gcc@4.8.5
+    permissions:
+      read: world
+      write: user

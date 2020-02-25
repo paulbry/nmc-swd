@@ -1,0 +1,5 @@
+#
+# common for xx-fe1 deployment (dev)
+#
+mirrors:
+  remote_binary_mirror: file:///ecp/sw/dev/release-mirror

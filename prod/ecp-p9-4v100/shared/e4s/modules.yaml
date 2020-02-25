@@ -1,0 +1,40 @@
+#
+# e4s include for ecp-p9-4v100 deployment (prod)
+#
+modules:
+  enable:
+    - lmod
+
+  lmod:
+    hierarchy: []
+    hash_length: 0
+    core_compilers: [gcc@4.8.5]
+    blacklist:
+      - '@system'
+      - '@local'
+        # system software
+      - bison@3.0.4
+      - openssl
+      - slurm
+      - cuda
+    all:
+      autoload: direct
+      environment:
+        set:
+          NMC_${PACKAGE}_ROOT: ${PREFIX}
+    boost:
+      suffixes:
+        "cxxstd=98": "cxxstd=98"
+        "cxxstd=14": "cxxstd=14"
+        "visibility=global": "+global"
+    hdf5:
+      suffixes:
+        "~hl": "~hl"
+        "+hl": "+hl"
+        "+fortran": "+fortran"
+        "-fortran": "-fortran"
+    mercury:
+      suffixes:
+        "~bmi": "~bmi"
+        "+bmi": "+bmi"
+

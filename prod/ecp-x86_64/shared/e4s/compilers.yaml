@@ -1,0 +1,17 @@
+#
+# e4s include for ecp-x86_64 deployment (prod)
+#
+compilers:
+  - compiler:
+      spec: gcc@7.3.0
+      operating_system: centos7
+      target: x86_64
+      modules: [gcc/7.3.0]
+      paths:
+        cc: gcc
+        cxx: g++
+        f77: gfortran
+        fc: gfortran
+      environment: {}
+      extra_rpaths: []
+      flags: {}

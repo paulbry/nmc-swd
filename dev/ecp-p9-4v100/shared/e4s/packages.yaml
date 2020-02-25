@@ -1,0 +1,52 @@
+#
+# e4s include for ecp-p9-4v100 deployment (dev)
+#
+packages:
+  all:
+    compiler: [gcc@7.3.0]
+    variants: +mpi
+    providers:
+      mpi: [mpich]
+      blas: [openblas]
+  bison:
+    buildable: false
+    version: [3.0.4]
+    paths:
+      bison@3.0.4: /usr
+  binutils:
+    variants: +gold+headers+libiberty~nls
+  boost:
+    variants: +atomic+chrono~clanglibcpp~context~coroutine +date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math+mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout
+      visibility=hidden +wave
+  cuda:
+    buildable: false
+    version: [10.1]
+    modules:
+      cuda@10.1: cuda/10.1
+  elfutils:
+    variants: ~bzip2~nls~xz
+  gcc:
+    version: [7.3.0]
+  llvm:
+    variants: ~all_targets~clang~compiler-rt~lld~lldb
+  mpich:
+    version: [3.2.1]
+    variants: ~wrapperrpath
+  openblas:
+    variants: threads=openmp
+  openssl:
+    buildable: false
+    version: [system, 1.0.2k]
+    paths:
+      openssl@system: /usr
+      openssl@1.0.2k: /usr
+  pcre:
+    variants: +jit+multibyte+utf
+  python:
+    version: [3.7.4, 2.7.16]
+    buildable: false
+    modules:
+      python@2.7.16: python/2.7.16
+      python@3.7.4: python/3.7.4
+  suite-sparse:
+    version: [5.3.0]

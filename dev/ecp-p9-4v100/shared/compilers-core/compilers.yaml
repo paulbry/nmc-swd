@@ -1,0 +1,19 @@
+#
+# compilers-core for ecp-p9-4v100 deployment (dev)
+#
+compilers:
+- compiler:
+    spec: gcc@4.8.5
+    operating_system: centos7
+    target: ppc64le
+    modules: []
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+  
+  

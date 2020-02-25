@@ -1,0 +1,16 @@
+#
+# conf-sdk for ecp-p9-4v100 deployment (dev)
+#
+config:
+  install_tree: /ecp/sw/opt/v2.0/ppc64le
+  module_roots:
+    lmod:   /ecp/sw/dev/ecp-p9-4v100/modulefiles/sdk
+  build_stage:
+    - /var/tmp/$user/spack-stage
+    - $spack/var/spack/stage
+  verify_ssl: true
+  checksum: true
+  dirty: false
+  source_cache: /ecp/sw/var/spack/cache
+  misc_cache:  /ecp/sw/var/spack/mcache
+  install_missing_compilers: true

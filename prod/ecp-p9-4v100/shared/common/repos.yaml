@@ -1,0 +1,5 @@
+#
+# common for ecp-x86_64 deployment (prod)
+#
+repos:
+  - /ecp/sw/repo

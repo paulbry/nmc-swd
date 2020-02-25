@@ -1,0 +1,158 @@
+#
+# common for ecp-p9-4v100 deployment (prod)
+#
+packages:
+  autoconf:
+    version: [2.69]
+
+  boost:
+    version: [1.70.0]
+
+  bison:
+    buildable: false
+    version: [3.0.4]
+    paths:
+      bison@3.0.4: /usr
+
+  bzip2:
+    version: [1.0.8]
+
+  charliecloud:
+    variants: "+builder"
+
+  cmake:
+    version: [3.14.5]
+    variants: "+ownlibs"
+
+  curl:
+    version: [7.63.0]
+
+  czmq:
+    version: [4.1.1]
+
+  elfutils:
+    version: [0.178]
+
+  fftw:
+    variants: "+float+long_double+openmp+fma simd=vsx"
+
+  go:
+    version: [1.13.5]
+    buildable: false
+    modules:
+      go@1.13.5: go/1.13.5
+
+  git:
+    version: [2.21.0]
+
+  gmp:
+    version: [6.1.2]
+
+  gnutls:
+    version: [3.6.8]
+    buildable: false
+    modules:
+      gnutls@3.6.8: gnutls/3.6.8
+
+  gpgme:
+    version: [1.3.2]
+    paths:
+      gpgme@1.3.2: /usr
+
+  hdf5:
+    variants: "+fortran+hl"
+
+  hypre:
+    variants: "+openmp~internal-superlu+shared"
+
+  hwloc:
+    variants: "+cuda"
+
+  intel-tbb:
+    version: [2019.8]
+
+  libevent:
+    version: [2.1.8]
+    variants: "+openssl"
+
+  libxml2:
+    version: [2.9.9]
+
+  llvm:
+    variants: "build_type=Release"
+
+  m4:
+    version: [1.4.18]
+
+  metis:
+    variants: "+real64"
+
+  mpich:
+    variants: +slurm
+    version: [3.3.1]
+
+  mvapich2:
+    version: [2.3.1]
+    # temporarily use sockets until fabric issue(s) resolved
+    variants: fabrics=sock process_managers=slurm +cuda
+
+  netcdf:
+    variants: ~hdf4+mpi+parallel-netcdf+shared
+
+  openmpi:
+    variants: fabrics=auto schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
+    version: [4.0.2, 3.1.4, 2.1.6]
+
+  openssl:
+    buildable: false
+    version: [system, 1.0.2k]
+    paths:
+      openssl@system: /usr
+      openssl@1.0.2k: /usr
+
+  papi:
+    variants: "cpu=POWER9"
+    version: [5.7.0]
+
+  parallel-netcdf:
+    variants: +cxx+fortran+pic
+
+  pcre:
+    version: [8.42]
+    variants: "+jit+multibyte+utf"
+
+  perl:
+    version: [5.26.2]
+
+  pkgconf:
+    version: [1.6.1]
+
+  python:
+    version: [3.7.4, 2.7.16]
+
+  slurm:
+    buildable: false
+    paths:
+      slurm@18.08.7: /usr
+    version: [18.08.7]
+
+  spectrum-mpi:
+    buildable: false
+
+  suite-sparse:
+      version: [5.3.0]
+
+  sqlite:
+    version: [3.29]
+
+  all:
+    compiler: [gcc, llvm]
+    providers:
+      mpi: [openmpi, mpich, mvapich2]
+      lapack: [netlib-lapack]
+      blas: [netlib-lapack]
+      scalapack: [netlib-scalapack]
+    permissions:
+      read: world
+      write: user
+    target: [ppc64le]

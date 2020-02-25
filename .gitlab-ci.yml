@@ -1,0 +1,268 @@
+# Common Variables
+# ================
+variables:
+  SWCI_PREFIX: "/ecp/sw"
+  SWCI_TEMP: "/tmp/spack-nmc-sw"
+  SWCI_SERVICE_USER: "false"
+  SWCI_COMMIT: "55d5b435c8061d9fdc51feb03bf291b0b7a0f24c"
+
+# Build Stages
+# ============
+stages:
+  - staging
+  - 0-base
+  - 1-core
+  - 2-compute
+  - 3-sdk
+  - 4-py
+  - cleanup
+
+# Before Script
+# =============
+before_script:
+  # prepare swci environment
+  - ./bin/swci_env_info.bash
+  - source bin/swci_load_env.bash
+
+# After Script
+# ============
+after_script:
+  - echo "=== after_script section ==="
+  - date +'TIME='%T.%N
+
+# Common staging script
+# ---------------------
+.staging:
+  stage: staging
+  script:
+    - echo "=== Common staging script ==="
+    - ./bin/swci_verify_spack.bash
+    - ./bin/swci_stage_system.bash
+    - ./bin/swci_static_modulefiles.bash
+  allow_failure: false
+
+
+# Common deployment script
+# ------------------------
+.deploy:
+  script:
+    - echo "=== Common deployment script ==="
+    - echo $CI_JOB_STAGE
+    - ./bin/swci_verify_spack.bash
+    - ./bin/swci_static_modulefiles.bash
+    - ./bin/swci_provision_software.bash
+  allow_failure: false
+
+# Common Cleanup script
+# ---------------------
+.build_errors:
+  script:
+    - echo "=== Common Cleanup script ==="
+    - ./bin/swci_cleanup.bash
+  stage: cleanup
+  when: on_failure
+
+# Remove packages not in production from staging areas
+# ----------------------------------------------------
+.clean_staging:
+  script:
+    - echo "=== Common Cleanup script ==="
+    - ./bin/swci_cleanup.bash
+  stage: cleanup
+
+# Shared only logics
+# ------------------
+.only-master:
+  only:
+    refs:
+      - master
+
+# Shared runners
+# --------------
+.fe1-batch:
+  extends: .only-master
+  tags:
+    - dosequis
+    - slurm
+    - nmc
+
+.fe1-shell:
+  extends: .only-master
+  tags:
+    - dosequis-shell
+    - dosequis-spack 
+
+
+# Host Specific Jobs
+# ==================
+# These jobs handle the task of staging and deploying software on specific
+# hosts. Because the operations are essential the same for each system, we make
+# extensive use of YAML references and anchors to minimize duplication of
+# instructions.
+
+# ecp-p9-4v100
+# ------------
+.ecp-p9-4v100_common:
+  extends: .fe1-batch
+  only:
+    changes:
+      - prod/ecp-p9-4v100/**/**/*
+  variables:
+    NMC_FE1_SLURM_PARAMETERS: "--nodes=1 --partition=ecp-p9-4v100 --time=8:00:00"
+    SWCI_HOST: "ecp-p9-4v100"
+
+ecp-p9-4v100.staging:
+  extends: 
+    - .ecp-p9-4v100_common
+    - .staging
+
+ecp-p9-4v100.deploy_0-base:
+  extends: 
+    - .ecp-p9-4v100_common
+    - .deploy
+  stage: 0-base
+
+ecp-p9-4v100.deploy_1-core:
+  extends:
+    - .ecp-p9-4v100_common
+    - .deploy
+  stage: 1-core
+
+ecp-p9-4v100.deploy_2-compute:
+  stage: 2-compute
+  extends: 
+    - .ecp-p9-4v100_common
+    - .deploy
+
+ecp-p9-4v100.deploy_3-sdk:
+  extends: 
+    - .ecp-p9-4v100_common
+    - .deploy
+  stage: 3-sdk
+
+ecp-p9-4v100.deploy_4-py:
+  extends:
+    - .ecp-p9-4v100_common
+    - .deploy
+  stage: 4-py
+
+ecp-p9-4v100.build_errors_cleanup:
+  extends:
+    - .ecp-p9-4v100_common
+    - .build_errors
+
+ecp-p9-4v100.clean_staging_cleanup:
+  extends:
+    - .ecp-p9-4v100_common
+    - .clean_staging
+
+# xx-fe1
+# ------
+.xx-fe1_common:
+  extends: .fe1-shell
+  only:
+    changes:
+      - prod/xx-fe1/**/**/*
+  variables:
+    SWCI_HOST: "xx-fe1"
+
+xx-fe1.staging:
+  extends:
+    - .xx-fe1_common
+    - .staging
+
+xx-fe1.deploy_0-base:
+  extends: 
+    - .xx-fe1_common
+    - .deploy
+  stage: 0-base
+
+xx-fe1.deploy_1-core:
+  extends:
+    - .xx-fe1_common
+    - .deploy
+  stage: 1-core
+
+xx-fe1.deploy_2-compute:
+  extends:
+    - .xx-fe1_common
+    - .deploy
+  stage: 2-compute
+
+xx-fe1.deploy_3-sdk:
+  extends: 
+    - .xx-fe1_common
+    - .deploy
+  stage: 3-sdk
+
+xx-fe1.deploy_4-py:
+  extends: 
+    - .xx-fe1_common
+    - .deploy
+  stage: 4-py
+
+xx-fe1.build_errors_cleanup:
+  extends: 
+    - .xx-fe1_common
+    - .build_errors
+
+xx-fe1.clean_staging_cleanup:
+  extends:
+    - .clean_staging
+    - .xx-fe1_common
+
+# ecp-x86_64
+# --------------
+.ecp-x86_64-common:
+  extends: .fe1-batch
+  only:
+    changes:
+      - prod/ecp-x86_64/**/**/*
+  variables:
+    NMC_FE1_SLURM_PARAMETERS: "--nodes=1 --partition=ecp-x86_64 --time=8:00:00"
+    SWCI_HOST: "ecp-x86_64"
+
+ecp-x86_64.staging:
+  extends: 
+    - .ecp-x86_64-common
+    - .staging
+
+ecp-x86_64-deploy_0-base:
+  extends: 
+    - .ecp-x86_64-common
+    - .deploy
+  stage: 0-base
+
+ecp-x86_64.deploy_1-core:
+  extends: 
+    - .ecp-x86_64-common
+    - .deploy
+  stage: 1-core
+
+ecp-x86_64.deploy_2-compute:
+  extends: 
+    - .ecp-x86_64-common
+    - .deploy
+  stage: 2-compute
+
+ecp-x86_64.deploy_3-sdk:
+  extends:
+    - .ecp-x86_64-common
+    - .deploy
+  stage: 3-sdk
+
+ecp-x86_64.deploy_4-py:
+  extends:
+    - .ecp-x86_64-common
+    - .deploy
+  stage: 4-py
+
+ecp-x86_64.build_errors_cleanup:
+  extends:
+    - .ecp-x86_64-common
+    - .build_errors
+
+ecp-x86_64.clean_staging_cleanup:
+  extends:
+    - .ecp-x86_64-common
+    - .clean_staging

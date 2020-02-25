@@ -1,0 +1,56 @@
+#
+# compilers-all for ecp-p9-4v100 deployment (dev)
+#
+compilers:
+- compiler:
+    spec: gcc@4.8.5
+    operating_system: centos7
+    target: ppc64le
+    modules: []
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+- compiler:
+    spec: gcc@6.4.0
+    operating_system: centos7
+    target: ppc64le
+    modules: [gcc/6.4.0]
+    paths:
+      cc: gcc
+      cxx: g++
+      f77: gfortran
+      fc: gfortran
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+- compiler:
+    spec: gcc@8.3.0
+    operating_system: centos7
+    target: ppc64le
+    modules: [gcc/8.3.0]
+    paths:
+      cc: gcc
+      cxx: g++
+      f77: gfortran
+      fc: gfortran
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+- compiler:
+    spec: clang@7.1.0
+    operating_system: centos7
+    target: ppc64le
+    modules: [llvm/7.1.0]
+    paths:
+      cc: clang
+      cxx: clang++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    environment: {}
+    extra_rpaths: []
+    flags: {}

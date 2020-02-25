@@ -1,0 +1,23 @@
+#
+# common for xx-fe1 deployment (prod)
+#
+modules:
+  enable:
+  - lmod
+  lmod:
+    hash_length: 0
+    core_compilers: ['gcc@4.8.5']
+    blacklist:
+      - '@system'
+      - '@local'
+      # system software
+      - 'openssl'
+      - 'slurm'
+    all:
+      autoload: 'direct'
+      environment:
+        set:
+          NMC_${PACKAGE}_ROOT: '${PREFIX}'
+      suffixes:
+        "^python@2.0:2.99": 'py2'
+        "^python@3.0:3.99": 'py3'
