@@ -1,0 +1,17 @@
+#
+# e4s include for ecp-p9-4v100 deployment (prod)
+#
+compilers:
+  - compiler:
+      spec: gcc@7.3.0
+      operating_system: centos7
+      target: ppc64le
+      modules: [gcc/7.3.0]
+      paths:
+        cc: gcc
+        cxx: g++
+        f77: gfortran
+        fc: gfortran
+      environment: {}
+      extra_rpaths: []
+      flags: {}

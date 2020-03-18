@@ -1,0 +1,13 @@
+
+.vscode/*
+.ideas/*
+.test/*
+
+spack/*
+olcf-spack/*
+
+**/.spack-db/*
+**/.spack-env/*
+**/spack-cc-*.out.log
+
+*.pyc

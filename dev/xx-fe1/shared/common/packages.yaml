@@ -1,0 +1,73 @@
+#
+# common for xx-fe1 deployment (dev)
+#
+packages:
+  autoconf:
+    version: [2.69]
+
+  bison:
+    version: [3.0.4]
+
+  bzip2:
+    version: [1.0.8]
+
+  charliecloud:
+    variants: "+builder"
+
+  cmake:
+    version: [3.14.5]
+    variants: "+ownlibs"
+
+  curl:
+    version: [7.63.0]
+
+  czmq:
+    version: [4.1.1]
+
+  gcc:
+    variants: "+strip"
+
+  git:
+    version: [2.21.0]
+
+  gmp:
+    version: [6.1.2]
+
+  libevent:
+    version: [2.1.8]
+    variants: "+openssl"
+
+  m4:
+    version: [1.4.18]
+
+  openssl:
+    buildable: false
+    version: [system, 1.0.2k]
+    paths:
+      openssl@system: /usr
+      openssl@1.0.2k: /usr
+
+  perl:
+    version: [5.26.2]
+
+  pkgconf:
+    version: [1.6.1]
+
+  python:
+    version: [3.7.4, 2.7.16]
+
+  slurm:
+    buildable: false
+    paths:
+      slurm@18.08.7: /usr
+    version: [18.08.7]
+
+  sqlite:
+    version: [3.29]
+
+  all:
+    compiler:
+      - gcc@4.8.5
+    permissions:
+      read: world
+      write: user

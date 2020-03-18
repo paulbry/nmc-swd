@@ -1,0 +1,5 @@
+#
+# common for xx-fe1 deployment (prod)
+#
+repos:
+  - /ecp/sw/repo

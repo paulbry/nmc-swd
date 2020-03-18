@@ -1,0 +1,32 @@
+#
+# modules for ecp-p9-4v100 deployment (dev)
+#
+modules:
+  enable:
+  - lmod
+
+  lmod:
+    hierarchy:
+      - mpi
+      - lapack
+    hash_length: 0
+    core_compilers: ['gcc@4.8.5']
+    blacklist:
+      - '@system'
+      - '@local'
+      # system software
+      - 'openssl'
+      - 'slurm'
+    openmpi:
+      suffixes:
+        "schedulers=none": "noScheduler"
+    all:
+      autoload: 'direct'
+      environment:
+        set:
+          NMC_${PACKAGE}_ROOT: '${PREFIX}'
+      suffixes:
+        "^python@2.0:2.99": 'py2'
+        "^python@3.0:3.99": 'py3'
+        "+internal-superlu": "+internal-superlu"
+        "~internal-superlu": "~internal-superlu"

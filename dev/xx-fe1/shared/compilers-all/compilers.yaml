@@ -1,0 +1,17 @@
+#
+# compilers-all for xx-fe1 deployment (dev)
+#
+compilers:
+  - compiler:
+      spec: gcc@4.8.5
+      operating_system: centos7
+      target: x86_64
+      modules: []
+      paths:
+        cc: /usr/bin/gcc
+        cxx: /usr/bin/g++
+        f77: /usr/bin/gfortran
+        fc: /usr/bin/gfortran
+      environment: {}
+      extra_rpaths: []
+      flags: {}
