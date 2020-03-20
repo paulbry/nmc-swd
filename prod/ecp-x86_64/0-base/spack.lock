@@ -8543,10 +8543,6 @@
    "spec": "git%gcc@4.8.5"
   },
   {
-   "hash": "iv4gmudzulxrv57ckovbdlohcafkpzhb",
-   "spec": "go%gcc@4.8.5"
-  },
-  {
    "hash": "vl4zmpkighwyewfuoe2cx63vloyxk3mo",
    "spec": "gnuplot%gcc@4.8.5"
   },

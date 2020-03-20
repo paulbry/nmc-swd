@@ -59,6 +59,7 @@ spack:
       - [$core-compilers, $gcc-compilers, $llvm-compilers]
       exclude:
         # clang
+        - ^openmpi %clang@7.1.0
         - netlib-scalapack %clang@7.1.0
         - petsc %clang@7.1.0
 ###############################################################################

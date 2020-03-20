@@ -5,13 +5,13 @@
 --
 
 whatis([[Name : go]])
-whatis([[Version : 1.13.5]])
+whatis([[Version : 1.14.1]])
 whatis([[Short description : The golang compiler and build environment]])
 
 help([[The golang compiler and build environment]])
 
-local version = "1.13.5"
-local base = pathJoin("/ecp/sw/opt/manual/ppc64le/go/", version)
+local version = "1.14.1"
+local base = pathJoin("/ecp/sw/opt/manual/ppc64le/go/1.14.1/", version)
 
 setenv("NMC_GO_ROOT", base)
 

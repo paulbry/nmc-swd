@@ -10,7 +10,7 @@ spack:
     - ../shared/modules/modules.yaml
     - ../shared/conf-general
     - ../shared/common
-    - ../shared/compilers-all    
+    - ../shared/compilers-all
 ###############################################################################
   definitions:
     - core-compilers:

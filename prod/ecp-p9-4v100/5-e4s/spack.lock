@@ -7210,42 +7210,6 @@
     "hash": "sa72ledrgx2arrjcpq5uqpowgghhkt5x"
    }
   },
-  "4xhoqpz3iw2psmxwd6te6u5eymf7qeme": {
-   "openblas": {
-    "version": "0.3.8",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "power9le",
-      "vendor": "IBM",
-      "features": [],
-      "generation": 9,
-      "parents": [
-       "power8le"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "7.3.0"
-    },
-    "namespace": "nmc",
-    "parameters": {
-     "ilp64": false,
-     "pic": true,
-     "shared": true,
-     "threads": "openmp",
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "hash": "4xhoqpz3iw2psmxwd6te6u5eymf7qeme"
-   }
-  },
   "fzwbq2oq653khgx4lmuy3sm2bya6tw6u": {
    "tcl": {
     "version": "8.6.8",
@@ -8180,7 +8144,7 @@
    "spec": "tasmanian"
   },
   {
-   "hash": "4xhoqpz3iw2psmxwd6te6u5eymf7qeme",
+   "hash": "ls2yyj35le5qs6p35oklrfbuk2disdli",
    "spec": "openblas threads=openmp"
   },
   {

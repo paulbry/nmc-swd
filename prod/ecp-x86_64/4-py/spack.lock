@@ -70,6 +70,63 @@
     "hash": "fanmuicylfo5xjbufzmznqyfcmb4hmxx"
    }
   },
+  "mztusq5bqfh4spbwj6shki4psjz537ff": {
+   "py-idna": {
+    "version": "2.8",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "3g4q2xckjxqp74qnb6m7hqdzopf4hwol"
+   }
+  },
   "smvmx7vfmxujokpt67js637ewu2i6p32": {
    "gdbm": {
     "version": "1.18.1",
@@ -505,6 +562,62 @@
     "hash": "xguzaxfbd7zygh2l2tzxey4edduswt2i"
    }
   },
+  "rbw3sjc4juut5ztm3i6o6ei4agcqucvp": {
+   "py-urllib3": {
+    "version": "1.25.6",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "biotirj5tryhole62rom5v6kdfq3sdol"
+   }
+  },
   "sn6w6rxgtvy32brid7ywdmog3ibrlmj7": {
    "py-cython": {
     "version": "0.29.14",
@@ -559,6 +672,68 @@
      }
     },
     "hash": "6tiij5nfm6dp2lq2ovxrlanxgd46xc6i"
+   }
+  },
+  "yo45okg3z5cf4d4q3gxe23n7ttikp6j2": {
+   "py-chardet": {
+    "version": "3.0.4",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-pytest-runner": {
+      "hash": "bf4cxhqca4tgezzcwuampfdxw6265xx5",
+      "type": [
+       "build"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "n2e6my46rkuztjgne67cmcqt6g6o4d3o"
    }
   },
   "5ekzcq3tfzk5mv7vdacaky72t24qb2au": {
@@ -885,6 +1060,124 @@
     "hash": "ygthscqmq2rmdnoipnmblaz5ltzvhbit"
    }
   },
+  "625vunkedzvfjyo64tdy2foqxczmwmsj": {
+   "py-setuptools-scm": {
+    "version": "3.3.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "wpxltgzuyjgeo3k74hcdgy4sfzc73qaf"
+   }
+  },
+  "bf4cxhqca4tgezzcwuampfdxw6265xx5": {
+   "py-pytest-runner": {
+    "version": "5.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "py-setuptools-scm": {
+      "hash": "625vunkedzvfjyo64tdy2foqxczmwmsj",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "axvnfcas3uamfeizkdam3dimxrtn3rxg"
+   }
+  },
   "6axwks2ebjzab7shpyw2fs5ytkszx2bx": {
    "cmake": {
     "version": "3.16.2",
@@ -1064,6 +1357,90 @@
      "ldlibs": []
     },
     "hash": "4ihsd224y6jbmlnnlvornmq5eqjgj2vd"
+   }
+  },
+  "ur35eo7cocpj5cuyzbqnxlxgyfseqsw3": {
+   "py-requests": {
+    "version": "2.22.0",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-certifi": {
+      "hash": "y4bowc5xktvmw6tttadyjsvbniagnctu",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-chardet": {
+      "hash": "yo45okg3z5cf4d4q3gxe23n7ttikp6j2",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-idna": {
+      "hash": "mztusq5bqfh4spbwj6shki4psjz537ff",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "py-urllib3": {
+      "hash": "rbw3sjc4juut5ztm3i6o6ei4agcqucvp",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "3a2ycsdajq42ox2z2whprqs7msywgumy"
    }
   },
   "azf2exqkla3xt4t6ur43e7eccnkfpfe3": {
@@ -1293,6 +1670,62 @@
     "hash": "7wrc4xgyhpte6d7kst3wedmr6w4t32fv"
    }
   },
+  "y4bowc5xktvmw6tttadyjsvbniagnctu": {
+   "py-certifi": {
+    "version": "2019.9.11",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "lencfcoov7q45rnscwcgg7vb6j7tdmfw",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "hgknfhfcojnw4wcgu4izxm5a7lm27utr",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "khbj5hasblor7g2gbjf3wdwnqpeaxeop"
+   }
+  },
   "j3ejqbb375zuaq7tyzlwng7dkjjpkhwn": {
    "netlib-lapack": {
     "version": "3.8.0",
@@ -1436,6 +1869,10 @@
   {
    "hash": "et3tmr6dczu73pn2jalfbzyty46gcbqt",
    "spec": "py-numpy%gcc@4.8.5 ^python@3.7.4"
+  },
+  {
+   "hash": "ur35eo7cocpj5cuyzbqnxlxgyfseqsw3",
+   "spec": "py-requests%gcc@4.8.5 ^python@3.7.4"
   }
  ]
 }

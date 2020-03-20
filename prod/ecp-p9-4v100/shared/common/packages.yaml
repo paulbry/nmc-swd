@@ -100,7 +100,7 @@ packages:
     variants: ~hdf4+mpi+parallel-netcdf+shared
 
   openmpi:
-    variants: fabrics=auto schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
+    variants: fabrics=ucx schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
     version: [4.0.2, 3.1.4, 2.1.6]
 
   openssl:

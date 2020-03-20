@@ -4,7 +4,7 @@
 config:
   install_tree: /ecp/sw/opt/v2.0/x86_64
   module_roots:
-    lmod:   /ecp/sw/dev/ecp-x86_64/modulefiles/py
+    lmod:   /ecp/sw/dev/ecp-x86_64/modulefiles/v2/py
   build_stage:
     - /var/tmp/$user/spack-stage
     - $spack/var/spack/stage

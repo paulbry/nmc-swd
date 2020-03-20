@@ -1,8 +1,8 @@
 #
-# conf-python for ecp-p9-4v100 deployment (dev)
+# conf-python for ecp-p9-4v100 deployment (prod)
 #
 config:
-  install_tree: /ecp/sw/opt/v2.0/ppc64le
+  install_tree: /ecp/sw/dev/opt/v2.0/ppc64le
   module_roots:
     lmod:   /ecp/sw/ecp-p9-4v100/modulefiles/v2/py
   build_stage:

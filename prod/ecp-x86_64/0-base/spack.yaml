@@ -31,7 +31,6 @@ spack:
       - cmake
       - flux-sched ^python@3.7.4
       - git
-      - go
       - gnuplot
       - makedepend
       - python@3.7.4

@@ -1,5 +1,5 @@
 #
-# conf-sdk for ecp-p9-4v100 deployment (dev)
+# conf-sdk for ecp-p9-4v100 deployment (prod)
 #
 config:
   install_tree: /ecp/sw/opt/v2.0/ppc64le

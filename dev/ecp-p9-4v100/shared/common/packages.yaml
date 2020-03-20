@@ -24,12 +24,6 @@ packages:
     version: [3.14.5]
     variants: "+ownlibs"
 
-  cuda:
-    buildable: false
-    version: [10.1]
-    modules:
-      cuda@10.1: cuda/10.1
-
   curl:
     version: [7.63.0]
 
@@ -106,7 +100,7 @@ packages:
     variants: ~hdf4+mpi+parallel-netcdf+shared
 
   openmpi:
-    variants: fabrics=auto schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
+    variants: fabrics=ucx schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
     version: [4.0.2, 3.1.4, 2.1.6]
 
   openssl:

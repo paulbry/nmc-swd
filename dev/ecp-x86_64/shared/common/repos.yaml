@@ -1,5 +1,5 @@
 #
-# common for ecp-x86_64 deployment (production)
+# common for ecp-x86_64 deployment (dev)
 #
 repos:
   - /ecp/sw/repo
