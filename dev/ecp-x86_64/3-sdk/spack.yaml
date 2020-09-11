@@ -19,7 +19,8 @@ spack:
       - "^openmpi@3.1.4"
 
     - xsdk:
-      - xsdk@0.5.0 ^petsc+trilinos ^hypre~openmp ^trilinos+superlu-dist~mumps~suite-sparse+nox~exodus+dtk+intrepid2+shards
+      #- xsdk@0.5.0 ^petsc+trilinos ^hypre~openmp ^trilinos+superlu-dist~mumps~suite-sparse+nox~exodus+dtk+intrepid2+shards
+      - xsdk ~precice~phist ^hypre~openmp
 ###############################################################################
   specs:
     - matrix:
@@ -39,7 +40,6 @@ spack:
       - '@local'
       - '%gcc@4.8.5'
       - openssl
-      - slurm
       all:
         autoload: direct
         environment:

@@ -13,7 +13,7 @@ if not isloaded("gcc/7.3.0") then
     load("gcc/7.3.0")
 end
 
-prepend_path("MODULEPATH", "/ecp/sw/dev/ecp-x86_64/modulefiles/e4s/linux-centos7-x86_64/gcc/7.3.0")
+prepend_path("MODULEPATH", "/ecp/sw/ecp-x86_64/modulefiles/v2/e4s/linux-centos7-x86_64/gcc/7.3.0")
 
 if not isloaded("mpich/3.2.1") then
     load("mpich/3.2.1 ")

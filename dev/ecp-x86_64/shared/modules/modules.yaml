@@ -1,5 +1,5 @@
 #
-# common for ecp-x86_64 deployment (dev)
+# modules for ecp-x86_64 deployment (dev)
 #
 modules:
   enable:

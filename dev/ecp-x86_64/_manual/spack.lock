@@ -1,0 +1,210 @@
+{
+ "concrete_specs": {
+  "ygthscqmq2rmdnoipnmblaz5ltzvhbit": {
+   "pkgconf": {
+    "version": "1.6.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "ygthscqmq2rmdnoipnmblaz5ltzvhbit"
+   }
+  },
+  "6qsymj4ihapt6fnn4scqn4cbc2uo2nrf": {
+   "cmake": {
+    "version": "3.16.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "doc": false,
+     "ncurses": true,
+     "openssl": true,
+     "ownlibs": true,
+     "qt": false,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "ncurses": {
+      "hash": "xhu32beedjkoqkctylwqt2qnsesrmhfv",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openssl": {
+      "hash": "5ekzcq3tfzk5mv7vdacaky72t24qb2au",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "zkpzqd5kfc4tgv7epzz7vubalaphmxgk"
+   }
+  },
+  "5ekzcq3tfzk5mv7vdacaky72t24qb2au": {
+   "openssl": {
+    "version": "1.0.2k",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "systemcerts": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "external": {
+     "path": "/usr",
+     "module": null
+    },
+    "hash": "5ekzcq3tfzk5mv7vdacaky72t24qb2au"
+   }
+  },
+  "xhu32beedjkoqkctylwqt2qnsesrmhfv": {
+   "ncurses": {
+    "version": "6.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "nehalem",
+      "vendor": "GenuineIntel",
+      "features": [
+       "mmx",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "core2"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "symlinks": false,
+     "termlib": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "ygthscqmq2rmdnoipnmblaz5ltzvhbit",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "3swmv4qbsauycnr4in3squiiccce3prc"
+   }
+  }
+ },
+ "_meta": {
+  "lockfile-version": 2,
+  "file-type": "spack-lockfile"
+ },
+ "roots": [
+  {
+   "hash": "6qsymj4ihapt6fnn4scqn4cbc2uo2nrf",
+   "spec": "cmake%gcc@4.8.5"
+  }
+ ]
+}

@@ -15,9 +15,9 @@ spack:
   - gcc-compilers:
     - '%gcc@8.3.0'
   - mpi-deps:
-    - ^openmpi@3.1.4
+    - ^openmpi@3.1.4 fabrics=none schedulers=slurm +thread_multiple+pmi+cuda+legacylaunchers
   - xsdk:
-    - xsdk@0.5.0 ~precice  ^petsc+trilinos~int64  ^hypre~openmp
+    - xsdk ~dealii~precice~phist ^petsc@3.12.1+trilinos~int64  ^hypre~openmp+superlu-dist
 ###############################################################################
   specs:
   - matrix:

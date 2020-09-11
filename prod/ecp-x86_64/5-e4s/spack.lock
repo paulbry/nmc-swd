@@ -8400,50 +8400,6 @@
     "hash": "4ciyeaxlvfmifnmphdhrndr2erijlrat"
    }
   },
-  "og7wfpp3qihvmbla6hufhcsg2rsmdwbe": {
-   "openblas": {
-    "version": "0.3.8",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "nehalem",
-      "vendor": "GenuineIntel",
-      "features": [
-       "mmx",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "core2"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "7.3.0"
-    },
-    "namespace": "nmc",
-    "parameters": {
-     "ilp64": false,
-     "pic": true,
-     "shared": true,
-     "threads": "openmp",
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "hash": "og7wfpp3qihvmbla6hufhcsg2rsmdwbe"
-   }
-  },
   "62qvgkthuavk4gpsexmf25hl2fyhkyog": {
    "parmetis": {
     "version": "4.0.3",
@@ -10252,7 +10208,7 @@
    "spec": "tasmanian"
   },
   {
-   "hash": "og7wfpp3qihvmbla6hufhcsg2rsmdwbe",
+   "hash": "cv7pwkjrltlzqxmz5v4wt5vvdmn57phq",
    "spec": "openblas threads=openmp"
   },
   {

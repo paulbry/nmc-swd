@@ -18,4 +18,5 @@ if not isloaded("openmpi/3.1.4") then
 end
 
 prepend_path("MODULEPATH", "/ecp/sw/ecp-x86_64/modulefiles/v2/sdk/linux-centos7-x86_64/gcc/8.3.0")
-prepend_path("MODULEPATH", "/ecp/sw/ecp-x86_64/modulefiles/v2/sdk/linux-centos7-x86_64/openmpi/3.1.4-i4ynhtc/gcc/8.3.0")
+prepend_path("MODULEPATH", "/ecp/sw/ecp-x86_64/modulefiles/v2/sdk/linux-centos7-x86_64/openmpi/3.1.4-vpuhldj/gcc/8.3.0")
+

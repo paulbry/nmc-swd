@@ -52,4 +52,5 @@ spack:
         - elfutils %clang@7.1.0
         - netlib-lapack %clang@7.1.0
         - pixman %clang@7.1.0
+        - openmpi %clang@7.1.0
 ###############################################################################

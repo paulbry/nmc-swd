@@ -3,14 +3,12 @@
 #
 spack:
   view: false
-###############################################################################
   include:
-    - ../shared/modules/modules.yaml
-    - ../shared/conf-general
-    - ../shared/common
-    - ../shared/compilers-all
+  - ../shared/modules/modules.yaml
+  - ../shared/conf-general
+  - ../shared/common
+  - ../shared/compilers-all
 ###############################################################################
   definitions: []
-###############################################################################
-  specs: []
+  specs: [cmake%gcc@4.8.5]
 ###############################################################################

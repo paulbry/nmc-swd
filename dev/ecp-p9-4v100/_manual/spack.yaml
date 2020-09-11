@@ -3,11 +3,12 @@
 #
 spack:
   view: false
-  include:
-  - ../shared/modules/modules.yaml
-  - ../shared/conf-general
-  #- ../shared/common
-  - ../shared/compilers-all
 ###############################################################################
-  specs: [cuda]
+  include:
+    - ../shared/modules/modules.yaml
+    - ../shared/conf-general
+    - ../shared/common
+    - ../shared/compilers-all
+###############################################################################
+  specs: []
 ###############################################################################

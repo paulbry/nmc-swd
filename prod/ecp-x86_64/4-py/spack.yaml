@@ -25,6 +25,7 @@ spack:
       - py-setuptools
       - py-cython
       - py-numpy
+      - py-requests
 ###############################################################################
   specs:
     - matrix:
